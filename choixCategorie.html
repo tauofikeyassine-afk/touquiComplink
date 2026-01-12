@@ -1,164 +1,145 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>CAMPLINK — Sorties débutants</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAMPLINK - Sorties débutants</title>
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --color-primary:#2F6B3A;
-      --color-accent:#7FB069;
-      --color-bg:#F7F5F1;
-      --color-text:#213028;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f5f1;
+      color: #213028;
     }
 
-    body{
-      margin:0;
-      font-family:Inter,sans-serif;
-      background:var(--color-bg);
-      color:var(--color-text);
-      line-height:1.5;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
     }
 
-    .cards-container{
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-      justify-content:center;
-      padding:16px;
+    .card {
+      width: 320px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
 
-    .container{
-      flex:1 1 300px;
-      max-width:400px;
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
 
-    .banner{
-      width:100%;
-      height:180px;
-      overflow:hidden;
-    }
-    .banner img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
+    .card-content {
+      padding: 15px;
     }
 
-    .content{
-      padding:16px;
-      display:flex;
-      flex-direction:column;
+    h1 {
+      font-family: "DM Serif Display", serif;
+      font-size: 22px;
+      margin: 0 0 10px;
     }
 
-    h1{
-      font-family:"DM Serif Display",serif;
-      font-size:22px;
-      margin:0;
+    p {
+      font-size: 14px;
+      margin: 0 0 8px;
     }
 
-    p{margin:0 0 8px;font-size:14px;}
-
-    .info{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-top:8px;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 14px;
     }
 
-    .pill{
-      background:var(--color-accent);
-      color:#fff;
-      padding:4px 10px;
-      border-radius:20px;
-      font-size:12px;
+    .places {
+      background: #7FB069;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
     }
 
-    button{
-      margin-top:12px;
-      padding:10px;
-      border:none;
-      border-radius:12px;
-      background:var(--color-primary);
-      color:#fff;
-      font-size:14px;
-      cursor:pointer;
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 10px;
+      background: #2F6B3A;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
-
-
+    button:hover {
+      background: #24562e;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="cards-container">
-    <div class="container">
-      <div class="banner">
-        <img src="Plage d’Agadir.jpg" alt="Sortie désert">
-      </div>
-      <div class="content">
+  <div class="cards">
+
+    <div class="card">
+      <img src="Plage d’Agadir.jpg" alt="Plage Agadir">
+      <div class="card-content">
         <h1>Plage d’Agadir</h1>
-        <p><strong>Lieu :</strong>d’Agadir</p>
-        <p>Grande plage, idéale pour nager, se promener et faire des sports nautiques. Climat doux presque toute l’année.</p>
+        <p><strong>Lieu :</strong> Agadir</p>
+        <p>Grande plage idéale pour nager et se promener.</p>
         <div class="info">
-          <span><strong>Prix:</strong> 250 DH</span>
-          <span class="pill">Places restantes: 5</span>
+          <span><strong>Prix :</strong> 250 DH</span>
+          <span class="places">Places : 5</span>
         </div>
         <a href="details.html"><button>Détails</button></a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="banner">
-        <img src="Plage Achakar.jpg" alt="Sortie montagne">
-      </div>
-      <div class="content">
+    <div class="card">
+      <img src="Plage Achakar.jpg" alt="Plage Achakar">
+      <div class="card-content">
         <h1>Plage Achakar</h1>
         <p><strong>Lieu :</strong> Tanger</p>
-        <p>Très belle vue sur l’océan, parfait pour les photos. Les vagues sont un peu fortes.</p>
+        <p>Belle vue sur l’océan, parfaite pour les photos.</p>
         <div class="info">
-          <span><strong>Prix:</strong> 250 DH</span>
-          <span class="pill">Places restantes: 8</span>
+          <span><strong>Prix :</strong> 250 DH</span>
+          <span class="places">Places : 8</span>
         </div>
         <a href="details.html"><button>Détails</button></a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="banner">
-        <img src="Dalia.jpg" alt="Sortie bord de mer">
-      </div>
-      <div class="content">
+    <div class="card">
+      <img src="Dalia.jpg" alt="Dalia">
+      <div class="card-content">
         <h1>Dalia</h1>
-        <p><strong>Lieu :</strong> Entre Tanger et Tétouan</p>
-        <p>Eau très claire, endroit calme, parfait pour les familles.</p>
+        <p><strong>Lieu :</strong> Tanger - Tétouan</p>
+        <p>Eau claire et endroit calme pour les familles.</p>
         <div class="info">
-          <span><strong>Prix:</strong> 250 DH</span>
-          <span class="pill">Places restantes: 12</span>
+          <span><strong>Prix :</strong> 250 DH</span>
+          <span class="places">Places : 12</span>
         </div>
         <a href="details.html"><button>Détails</button></a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="banner">
-        <img src="Aïn Diab.jpg" alt="Sortie forêt">
-      </div>
-      <div class="content">
+    <div class="card">
+      <img src="Aïn Diab.jpg" alt="Ain Diab">
+      <div class="card-content">
         <h1>Aïn Diab</h1>
-        <p><strong>Lieu :</strong> Casablanca, en plein centre.</p>
-        <p>Très populaire, beaucoup de cafés et restaurants. Idéale pour surfer.</p>
+        <p><strong>Lieu :</strong> Casablanca</p>
+        <p>Plage populaire avec cafés et surf.</p>
         <div class="info">
-          <span><strong>Prix:</strong> 250 DH</span>
-          <span class="pill">Places restantes: 6</span>
+          <span><strong>Prix :</strong> 250 DH</span>
+          <span class="places">Places : 6</span>
         </div>
         <a href="details.html"><button>Détails</button></a>
       </div>
