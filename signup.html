@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CAMPLINK — Créer un compte</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --color-primary:#2F6B3A;
+      --color-accent:#7FB069;
+      --color-bg:#F7F5F1;
+      --color-text:#213028;
+      --white-light:#F7F5F1;
+      --color-success:#2ECC71;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:var(--color-bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:16px;
+    }
+
+    .register-card{
+      background:white;
+      width:100%;
+      max-width:480px;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(33,48,40,0.08);
+      padding:36px;
+    }
+
+    h2{
+      font-family:"DM Serif Display", serif;
+      font-size:28px;
+      text-align:center;
+      margin:0 0 24px;
+      color:var(--color-text);
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    label{
+      font-size:14px;
+      margin-bottom:4px;
+      color:var(--color-text);
+    }
+
+    input, select{
+      padding:12px;
+      font-size:16px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      outline:none;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+      transition:border 0.2s;
+    }
+
+    input:focus, select:focus{
+      border:2px solid var(--color-primary);
+    }
+
+
+    .btn-primary{
+      padding:12px;
+      background:var(--color-primary);
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      margin-top:8px;
+      transition:background 0.2s;
+    }
+    .btn-primary:hover{
+      background:#27622F;
+    }
+
+    .microcopy{
+      font-size:12px;
+      color:#666;
+      margin-top:6px;
+      text-align:center;
+    }
+
+ 
+    .success-message{
+      display:none;
+      text-align:center;
+      color:var(--color-success);
+      font-weight:bold;
+      margin-top:12px;
+    }
+
+  
+    @media(max-width:480px){
+      .register-card{ padding:24px; }
+      h2{ font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-card">
+    <h2>Créer votre compte CAMPLINK</h2>
+    
+    <form id="registerForm">
+      <div>
+        <label for="fullname">Nom complet</label>
+        <input type="text" id="fullname" placeholder="Votre nom complet" required>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Votre email" required>
+      </div>
+
+      <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="Votre mot de passe" required>
+      </div>
+
+      <div>
+        <label for="confirmPassword">Confirmer le mot de passe</label>
+        <input type="password" id="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+      </div>
+
+      <div>
+        <label for="experience">Niveau d’expérience</label>
+        <select id="experience" required>
+          <option value="">Sélectionnez</option>
+          <option>Débutant</option>
+          <option>Moyen</option>
+          <option>Pro</option>
+        </select>
+      </div>
+
+    <a href="login.html" style="text-decoration: none; color: wheat; border:2px #2F6B3A solid ; width: 400px; padding: 15px;; text-align: center; background-color: #2F6B3A; border-radius: 30px; ">Géer un compte</a>
+
+      
+
+    <div class="success-message" id="successMsg">✔ Votre compte a été créé !</div>
+  </div>
+
+</body>
+</html>

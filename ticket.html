@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ticket CAMPLINK</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+
+  .ticket {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .line {
+    margin-bottom: 10px;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
+  .btn-print {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #2F6B3A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  @media print {
+    .btn-print {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="ticket">
+  <h2> CAMPLINK</h2>
+
+  <div class="line"><span class="label">Nom :</span> yassine taufiq</div>
+  <div class="line"><span class="label">Sortie :</span> la plage</div>
+  <div class="line"><span class="label">Lieu :</span> Plage d’Agadir</div>
+  <div class="line"><span class="label">Date :</span> 12 Décembre 2025</div>
+  <div class="line"><span class="label">Participants :</span> 2</div>
+  <div class="line"><span class="label">Montant payé :</span> 250 DH</div>
+  <div class="line"><span class="label">Référence :</span> CL-20251234</div>
+
+  <hr style="margin: 15px 0;">
+
+  <p style="font-size: 14px; color:#555;">
+    Merci d’avoir réservé avec CAMPLINK.  
+    Présentez ce ticket à l'organisateur lors de votre arrivée.
+  </p>
+
+  <button class="btn-print">Imprimer</button>
+</div>
+
+</body>
+</html>

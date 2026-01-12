@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CAMPLINK  Catégories</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --color-primary:#2F6B3A;
+      --color-accent:#7FB069;
+      --color-sky:#89C2D9;
+      --color-bg:#F7F5F1;
+      --color-text:#213028;
+      --color-muted:#7a7a7a;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+    }
+
+    a{text-decoration:none;color:inherit;display:block;}
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:0 auto;
+      padding:32px 0;
+    }
+
+
+    h1{
+      font-family:"DM Serif Display", serif;
+      font-size:32px;
+      text-align:center;
+      margin-bottom:32px;
+    }
+
+ 
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+
+   
+
+
+    .card{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 4px 18px rgba(33,48,40,0.06);
+      cursor:pointer;
+      transition:transform 0.3s ease;
+    }
+    .card:hover{ transform:scale(1.03); }
+
+    .card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+      display:block;
+      transition:transform 0.3s ease;
+    }
+
+    .card-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,0.28), rgba(0,0,0,0.28));
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:16px;
+    }
+
+    .card-title{
+      font-family:"DM Serif Display", serif;
+      font-size:28px;
+      color:white;
+      margin:0 0 4px;
+    }
+    .card-subtitle{
+      font-size:14px;
+      color:white;
+      opacity:0.85;
+      margin:0 0 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+      <h1>Choisissez le type de sortie</h1>
+
+    <div class="grid">
+      <a href="choixCategorie.html" class="card">
+        <img src="plage.jpg" alt="Plage et kayak">
+        <div class="card-overlay">
+          <h2 class="card-title">Plage</h2>
+        </div>
+      </a>
+
+      <a href="choixCategorie.html" class="card">
+        <img src="montagne.jpg" alt="Montagnes">
+        <div class="card-overlay">
+          <h2 class="card-title">Montagnes</h2>
+        </div>
+      </a>
+
+      <a href="choixCategorie.html" class="card">
+        <img src="foret.jpg" alt="Forêt">
+        <div class="card-overlay">
+          <h2 class="card-title">Forêt</h2>
+        </div>
+      </a>
+
+      <a href="choixCategorie.html" class="card">
+        <img src="desert.jpg" alt="Désert">
+        <div class="card-overlay">
+          <h2 class="card-title">Désert</h2>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>CAMPLINK — Détails de la sortie</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --color-primary:#2F6B3A;
+      --color-accent:#7FB069;
+      --color-earth:#8B5E3C;
+      --color-bg:#F7F5F1;
+      --color-text:#213028;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Inter,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+    }
+
+    a{text-decoration:none;color:inherit;}
+
+
+    .trip-banner{
+      position:relative;
+      width:100%;
+      height:600px;
+      border-radius:16px;
+      overflow:hidden;
+      margin:24px auto;
+    }
+    .trip-banner img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .trip-banner::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.5));
+    }
+    .trip-banner-content{
+      position:absolute;
+      bottom:24px;
+      left:24px;
+      color:white;
+      z-index:2;
+    }
+    .trip-banner-content h1{
+      font-family:"DM Serif Display",serif;
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .trip-banner-content p{
+      font-size:18px;
+      margin:0;
+    }
+
+ 
+    .container{
+      display:flex;
+      gap:24px;
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      flex-wrap:wrap;
+    }
+    .main-content{flex:0 0 70%;}
+    .sidebar{flex:0 0 28%;}
+
+ 
+    section{margin-bottom:32px;}
+    section h3{
+      font-family:"DM Serif Display",serif;
+      font-size:22px;
+      margin-bottom:12px;
+      border-bottom:1px solid rgba(33,48,40,0.1);
+      padding-bottom:6px;
+    }
+    .description p{margin-bottom:12px;line-height:1.5;}
+    .bullet-list{padding-left:20px;margin-bottom:12px;}
+    .bullet-list li{margin-bottom:6px;}
+
+    
+    .itinerary{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .day-box{
+      background:#fff;
+      border-radius:12px;
+      padding:12px;
+      box-shadow:0 2px 8px rgba(33,48,40,0.05);
+    }
+
+   
+    .organizer{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:16px;
+    }
+    .organizer img{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+    .organizer .info{
+      flex-grow:1;
+    }
+    .organizer .info p{margin:2px 0;}
+    .organizer button{
+      background:var(--color-primary);
+      color:white;
+      border:none;
+      padding:8px 16px;
+      border-radius:12px;
+      cursor:pointer;
+    }
+
+   
+    .booking-card{
+      background:#fff;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 6px 18px rgba(33,48,40,0.06);
+      margin-bottom:24px;
+      position:sticky; 
+      top:24px;
+    }
+    .booking-card .price{
+      font-size:32px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+    .booking-card .pill{
+      display:inline-block;
+      background:var(--color-accent);
+      color:white;
+      padding:4px 12px;
+      border-radius:20px;
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    .booking-card button{
+      background:var(--color-primary);
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:12px;
+      cursor:pointer;
+      width:100%;
+      font-size:16px;
+    }
+
+    .map-placeholder{
+      width:100%;
+      height:220px;
+      border:2px dashed rgba(33,48,40,0.3);
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:24px;
+      font-size:14px;
+      color:rgba(33,48,40,0.5);
+    }
+
+    .participants{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .participants img{
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+    .participants span{font-size:14px;color:var(--color-text);cursor:pointer;}
+
+    .match-grid{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .match-card{
+      background:#fff;
+      border-radius:12px;
+      padding:12px;
+      width:120px;
+      text-align:center;
+      box-shadow:0 2px 8px rgba(33,48,40,0.06);
+    }
+    .match-card img{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      margin-bottom:6px;
+    }
+    .match-card .badge{
+      display:inline-block;
+      background:var(--color-accent);
+      color:white;
+      font-size:12px;
+      padding:2px 6px;
+      border-radius:12px;
+      margin-top:4px;
+    }
+
+    @media(max-width:1024px){
+      .main-content,.sidebar{flex:0 0 100%;}
+      .booking-card{position:static; top:auto;}
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div class="trip-banner">
+    <img src="plageaga.jpg" alt="Trip banner">
+    <div class="trip-banner-content">
+      <h1>Plage d’Agadir</h1>
+      <p>d’Agadir</p>
+    </div>
+  </div>
+
+  <div class="container">
+   
+    <div class="main-content">
+      <section class="description">
+        <h3>Aperçu</h3>
+        <p>Rejoignez cette aventure unique au bord de l’océan, profitez d’un coucher de soleil magique et détendez-vous sur l’une des plus belles plages du Maroc.</p>
+      </section>
+
+      <section class="itinerary">
+        <h3>Itinéraire</h3>
+        <div class="day-box"><strong>Jour 1:</strong> Arrivée à Merzouga et installation au camp.</div>
+        <div class="day-box"><strong>Jour 2:</strong> Excursion dans les dunes et balade en chameau.</div>
+        <div class="day-box"><strong>Jour 3:</strong> Retour et départ.</div>
+      </section>
+
+      <section class="what-to-bring">
+        <h3>Ce qu’il faut apporter</h3>
+        <ul class="bullet-list">
+          <li>Chapeau et lunettes de soleil</li>
+          <li>Vêtements légers et chauds pour la nuit</li>
+          <li>Crème solaire et lampe frontale</li>
+        </ul>
+      </section>
+
+    </div>
+
+   
+    <div class="sidebar">
+      <div class="booking-card">
+        <div class="price">250 MAD</div>
+        <div class="pill">Places restantes: 5</div>
+        <label>Dates:</label>
+        <p>12-15 Décembre</p>
+        <a href="payment.html"><button>Rejoindre la sortie</button></a>
+      </div>
+
+      
+    </div>
+  </div>
+
+</body>
+</html>

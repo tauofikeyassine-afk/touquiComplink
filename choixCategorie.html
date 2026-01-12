@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>CAMPLINK — Sorties débutants</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --color-primary:#2F6B3A;
+      --color-accent:#7FB069;
+      --color-bg:#F7F5F1;
+      --color-text:#213028;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter,sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.5;
+    }
+
+    .cards-container{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      justify-content:center;
+      padding:16px;
+    }
+
+    .container{
+      flex:1 1 300px;
+      max-width:400px;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .banner{
+      width:100%;
+      height:180px;
+      overflow:hidden;
+    }
+    .banner img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    h1{
+      font-family:"DM Serif Display",serif;
+      font-size:22px;
+      margin:0;
+    }
+
+    p{margin:0 0 8px;font-size:14px;}
+
+    .info{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:8px;
+    }
+
+    .pill{
+      background:var(--color-accent);
+      color:#fff;
+      padding:4px 10px;
+      border-radius:20px;
+      font-size:12px;
+    }
+
+    button{
+      margin-top:12px;
+      padding:10px;
+      border:none;
+      border-radius:12px;
+      background:var(--color-primary);
+      color:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="cards-container">
+    <div class="container">
+      <div class="banner">
+        <img src="Plage d’Agadir.jpg" alt="Sortie désert">
+      </div>
+      <div class="content">
+        <h1>Plage d’Agadir</h1>
+        <p><strong>Lieu :</strong>d’Agadir</p>
+        <p>Grande plage, idéale pour nager, se promener et faire des sports nautiques. Climat doux presque toute l’année.</p>
+        <div class="info">
+          <span><strong>Prix:</strong> 250 DH</span>
+          <span class="pill">Places restantes: 5</span>
+        </div>
+        <a href="details.html"><button>Détails</button></a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="banner">
+        <img src="Plage Achakar.jpg" alt="Sortie montagne">
+      </div>
+      <div class="content">
+        <h1>Plage Achakar</h1>
+        <p><strong>Lieu :</strong> Tanger</p>
+        <p>Très belle vue sur l’océan, parfait pour les photos. Les vagues sont un peu fortes.</p>
+        <div class="info">
+          <span><strong>Prix:</strong> 250 DH</span>
+          <span class="pill">Places restantes: 8</span>
+        </div>
+        <a href="details.html"><button>Détails</button></a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="banner">
+        <img src="Dalia.jpg" alt="Sortie bord de mer">
+      </div>
+      <div class="content">
+        <h1>Dalia</h1>
+        <p><strong>Lieu :</strong> Entre Tanger et Tétouan</p>
+        <p>Eau très claire, endroit calme, parfait pour les familles.</p>
+        <div class="info">
+          <span><strong>Prix:</strong> 250 DH</span>
+          <span class="pill">Places restantes: 12</span>
+        </div>
+        <a href="details.html"><button>Détails</button></a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="banner">
+        <img src="Aïn Diab.jpg" alt="Sortie forêt">
+      </div>
+      <div class="content">
+        <h1>Aïn Diab</h1>
+        <p><strong>Lieu :</strong> Casablanca, en plein centre.</p>
+        <p>Très populaire, beaucoup de cafés et restaurants. Idéale pour surfer.</p>
+        <div class="info">
+          <span><strong>Prix:</strong> 250 DH</span>
+          <span class="pill">Places restantes: 6</span>
+        </div>
+        <a href="details.html"><button>Détails</button></a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
